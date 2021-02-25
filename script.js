@@ -22,10 +22,7 @@ function randomDice() {
     return ranNum;
 }
 
-
-
 function p1Roll() {
-   
     let ranNum = randomDice();
     diceEl.classList.remove('hidden');
     diceEl.src = `dice-${ranNum}.png`;
@@ -41,8 +38,8 @@ function p1Roll() {
     console.log(accuNum)
   
 }
+
 function p2Roll() {
-   
     let ranNum = randomDice();
     console.log(ranNum);
     diceEl.classList.remove('hidden');
@@ -90,8 +87,9 @@ function reset(){
     holdBtn.removeEventListener('click', keepScoreP2)
     rollBtn.addEventListener('click', p1Roll)
     holdBtn.addEventListener('click', keepScoreP1)
-    player1El.classList.remove('player--winner');
-    player0El.classList.remove('player--winner');
+    player1El.classList.remove('player--winner', 'player--active');
+    player0El.classList.remove('player--winner', 'player--active');
+    player0El.classList.add('player--active');
 }
 
 function switchToP2(){
