@@ -87,8 +87,10 @@ function reset(){
     holdBtn.removeEventListener('click', keepScoreP2)
     rollBtn.addEventListener('click', p1Roll)
     holdBtn.addEventListener('click', keepScoreP1)
-    player1El.classList.remove('player--winner', 'player--active');
-    player0El.classList.remove('player--winner', 'player--active');
+    player1El.classList.remove('player--winner');
+    player0El.classList.remove('player--winner');
+    player0El.classList.remove('player--active');
+    player1El.classList.remove('player--active');
     player0El.classList.add('player--active');
 }
 
